@@ -15,10 +15,10 @@ DRIVER : Driver is the function which calls the required classes and gets the in
 
 ## Instructions to test the code:
 
-Add the necessary Hadoop dependencies in the project before running the program.
-copy the .java file to a folder, open a terminal and follow the below commands to test the application:
-mkdir equijoin_classes
-mkdir inputMapReduce
+Add the necessary Hadoop dependencies in the project before running the program.__
+copy the .java file to a folder, open a terminal and follow the below commands to test the application:__
+mkdir equijoin_classes__
+mkdir inputMapReduce__
 cp input inputMapReduce/
 javac -d equijoin_classes/ equijoin.java -cp $(hadoop classpath)                         ---- To compile 
 jar -cvf equijoin.jar -C equijoin_classes/ .                                             ---- creating a jar file
