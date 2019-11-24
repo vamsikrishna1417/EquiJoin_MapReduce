@@ -1,0 +1,14 @@
+W, 2, Don, Larson, Newark, 555-3221
+Q, 1, 33000, 10000, part1
+Q, 2, 18000, 2000, part1
+Q, 2, 20000, 1800, part1
+W, 3, Qal, Maglite, Nutley, 555-6905
+Q, 3, 24000, 5000, part1
+Q, 4, 22000, 7000, part1
+W, 4, Bob, Turley, Passaic, 555-8908
+Q, 5, 22000, 7000, part1
+Q, 6, 22000, 7000, part1
+Q, 6, 22000, 7000, part1
+W, 5, Bob, Turley, Passaic, 555-8908
+W, 6, Bob, Turley, Passaic, 555-8908
+W, 6, Bob, Turley, Passaic, 555-8908
