@@ -15,22 +15,21 @@ DRIVER : Driver is the function which calls the required classes and gets the in
 
 ## Instructions to test the code:
 
-Add the necessary Hadoop dependencies in the project before running the program.__
-copy the .java file to a folder, open a terminal and follow the below commands to test the application:__
-mkdir equijoin_classes__
-mkdir inputMapReduce__
-cp input inputMapReduce/
-javac -d equijoin_classes/ equijoin.java -cp $(hadoop classpath)                         ---- To compile 
-jar -cvf equijoin.jar -C equijoin_classes/ .                                             ---- creating a jar file
-$HADOOP_HOME/sbin/start-dfs.sh                                                           ---- starting the cluster
-$HADOOP_HOME/sbin/start-yarn.sh     
-$HADOOP_HOME/bin/hdfs dfs -copyFromLocal inputMapReduce/ /                               ---- copying folder that contains input to hadoop filesystem
-$HADOOP_HOME/bin/hadoop jar equijoin.jar equijoin /inputMapReduce /output_equijoin       ---- running the application ( {pathtohadoopExec} jar {jarfilename} {classwithmainfunction} {inputfolder}   
-                                                                                                                               {outputfolder} )
-$HADOOP_HOME/bin/hdfs dfs -cat /output_equijoin/part-00000                               ---- see the Output
+Add the necessary Hadoop dependencies in the project before running the program.<br />
+copy the .java file to a folder, open a terminal and follow the below commands to test the application:<br />
+mkdir equijoin_classes <br />
+mkdir inputMapReduce <br />
+cp input inputMapReduce/ <br />
+javac -d equijoin_classes/ equijoin.java -cp $(hadoop classpath)                         ---- To compile <br />
+jar -cvf equijoin.jar -C equijoin_classes/ .                                             ---- creating a jar file <br />
+$HADOOP_HOME/sbin/start-dfs.sh                                                           ---- starting the cluster <br />
+$HADOOP_HOME/sbin/start-yarn.sh     <br />
+$HADOOP_HOME/bin/hdfs dfs -copyFromLocal inputMapReduce/ /                               ---- copying folder that contains input to hadoop filesystem <br />
+$HADOOP_HOME/bin/hadoop jar equijoin.jar equijoin /inputMapReduce /output_equijoin       ---- running the application ( {pathtohadoopExec} jar {jarfilename} {classwithmainfunction} {inputfolder}                                                                                                                         {outputfolder} ) <br />
+$HADOOP_HOME/bin/hdfs dfs -cat /output_equijoin/part-00000                               ---- see the Output <br />
 
-/* Stopping the cluster and deleting the files created */
-$HADOOP_HOME/sbin/stop-dfs.sh
-$HADOOP_HOME/sbin/stop-yarn.sh
-rm -rf equijoin.jar equijoin_classes/       
-hadoop dfs -rm -r -f /output_equijoin
+/* Stopping the cluster and deleting the files created */  <br />
+$HADOOP_HOME/sbin/stop-dfs.sh   <br />
+$HADOOP_HOME/sbin/stop-yarn.sh   <br />
+rm -rf equijoin.jar equijoin_classes/   <br />
+hadoop dfs -rm -r -f /output_equijoin    <br />
